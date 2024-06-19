@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '@/components/custom/header';
 
-const Home: React.FC = () => {
+const Home = () => {
   return (
     <div>
       <Header/>
