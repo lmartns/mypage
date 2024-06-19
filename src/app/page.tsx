@@ -18,9 +18,7 @@ const Home = () => {
               src="https://github.com/lmartns.png"
             />
           </Avatar>
-          <h1 className="text-center text-3xl font-bold">
-            Welcome to my portfolio
-          </h1>
+          <h1 className="text-center text-3xl font-bold">Welcome to my page</h1>
           <Card className="w-full h-auto shadow-none rounded-sm mt-6">
             <CardHeader>
               <CardTitle className="text-2xl">Links</CardTitle>
