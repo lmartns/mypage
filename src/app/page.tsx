@@ -24,10 +24,26 @@ const Home = () => {
               <CardTitle className="text-2xl">Links</CardTitle>
             </CardHeader>
             <CardContent className="flex space-x-6">
-            <a href="https://twitter.com/yourusername" className="text-primary hover:text-blue-500">Twitter</a>
-            <a href="https://github.com/yourusername" className="text-primary hover:text-primary-foreground">GitHub</a>
-            <a href="https://linkedin.com/in/yourusername" className="text-primary hover:text-primary-foreground">LinkedIn</a>
-            <a href="https://instagram.com/yourusername" className="text-primary hover:text-primary-foreground">Instagram</a>
+              <a
+                href="https://github.com/lmartns"
+                className="text-primary hover:text-indigo-600"
+                target="_blank"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/leonardomartinsdeveloper/"
+                className="text-primary hover:text-blue-600"
+                target="_blank"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://leomartins.substack.com/"
+                className="text-primary hover:text-orange-600"
+              >
+                Substack
+              </a>
             </CardContent>
           </Card>
           <Card className="w-full h-auto shadow-none rounded-sm mt-6">
