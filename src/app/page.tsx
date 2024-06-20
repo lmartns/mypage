@@ -26,21 +26,22 @@ const Home = () => {
             <CardContent className="flex space-x-6">
               <a
                 href="https://github.com/lmartns"
-                className="text-primary hover:text-indigo-600"
+                className="text-primary hover:underline"
                 target="_blank"
               >
                 GitHub
               </a>
               <a
                 href="https://www.linkedin.com/in/leonardomartinsdeveloper/"
-                className="text-primary hover:text-blue-600"
+                className="text-primary hover:underline"
                 target="_blank"
               >
                 LinkedIn
               </a>
               <a
                 href="https://leomartins.substack.com/"
-                className="text-primary hover:text-orange-600"
+                className="text-primary hover:underline"
+                target="_blank"
               >
                 Substack
               </a>
@@ -51,16 +52,57 @@ const Home = () => {
               <CardTitle className="text-2xl">Projects</CardTitle>
             </CardHeader>
             <CardContent>
-              <p>teste</p>
-              <p>teste</p>
-              <p>teste</p>
-              <p>teste</p>
-              <p>teste</p>
-              <p>teste</p>
-              <p>teste</p>
-              <p>teste</p>
-              <p>teste</p>
-              <p>teste</p>
+              <div className="mb-6">
+                <h3 className="text-xl font-semibold">
+                  <a
+                    href="https://github.com/lmartns/toy-story"
+                    className="hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Projeto Toy Story
+                  </a>
+                </h3>
+                <p>
+                  Descrição: Este projeto consiste em uma loja de brinquedo
+                  feita em Java.
+                </p>
+                <p>Tecnologias: Java, Spring, Hibernate</p>
+              </div>
+              <div className="mb-6">
+                <h3 className="text-xl font-semibold">
+                  <a
+                    href="https://github.com/lmartns/star-wars"
+                    className="hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Projeto Star Wars
+                  </a>
+                </h3>
+                <p>
+                  - Descrição: Este projeto é um banco de dados de personagens
+                  do universo Star Wars.
+                </p>
+                <p>- Tecnologias: Node.js, Express, MongoDB</p>
+              </div>
+              <div className="mb-6">
+                <h3 className="text-xl font-semibold">
+                  <a
+                    href="https://github.com/lmartns/avengers"
+                    className="hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Projeto Avengers
+                  </a>
+                </h3>
+                <p>
+                  Descrição: Este projeto é um aplicativo para gerenciar times
+                  de super-heróis.
+                </p>
+                <p>Tecnologias: React, Redux, Firebase</p>
+              </div>
             </CardContent>
           </Card>
         </div>
