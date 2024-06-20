@@ -5,8 +5,40 @@ import Header from "@/components/custom/header";
 import { Avatar, AvatarImage } from "@radix-ui/react-avatar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Footer from "@/components/custom/footer";
+import ProjectCard from "@/components/custom/card";
 
-const Home = () => {
+interface Project {
+  title: string;
+  description: string;
+  technologies: string[];
+  link: string;
+}
+
+const Home: React.FC = () => {
+  const projects: Project[] = [
+    {
+      title: "#Finance API",
+      description:
+        "Finance Api é um projeto desenvolvido em CSharp, utilizando Dotnet que consiste em uma API para um sistema financeiro.",
+      technologies: ["C#", "Dotnet", "EntityFramework", "SQLServer"],
+      link: "https://github.com/lmartns/FinanceApi",
+    },
+    {
+      title: "#Java Bank",
+      description:
+        "Este projeto simula algumas operações de um banco, onde você pode realizar três operações principais: depósito, saque e visualização da quantia que está na conta.",
+      technologies: ["Java", "Lombok"],
+      link: "https://github.com/lmartns/Java-Bank",
+    },
+    {
+      title: "#API Restful de Pizzaria",
+      description:
+        "API Restful de uma pizzaria desenvolvida em Node.js, utilizando o banco de dados MySQL para armazenar dados persistentes.",
+      technologies: ["JavaScript", "Node.js", "Express", "MySQL"],
+      link: "https://github.com/lmartns/API-RESTful",
+    },
+  ];
+
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
@@ -19,7 +51,7 @@ const Home = () => {
             />
           </Avatar>
           <h1 className="text-center text-3xl font-bold">Welcome to my page</h1>
-          <Card className="w-full h-auto shadow-none rounded-sm mt-6">
+          <Card className="w-full h-auto shadow-none rounded border-gray-900 mt-6">
             <CardHeader>
               <CardTitle className="text-2xl">Links</CardTitle>
             </CardHeader>
@@ -28,6 +60,7 @@ const Home = () => {
                 href="https://github.com/lmartns"
                 className="text-primary hover:underline"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 GitHub
               </a>
@@ -35,6 +68,7 @@ const Home = () => {
                 href="https://www.linkedin.com/in/leonardomartinsdeveloper/"
                 className="text-primary hover:underline"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 LinkedIn
               </a>
@@ -42,68 +76,25 @@ const Home = () => {
                 href="https://leomartins.substack.com/"
                 className="text-primary hover:underline"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Substack
               </a>
             </CardContent>
           </Card>
-          <Card className="w-full h-auto shadow-none rounded-sm mt-6">
+          <Card className="w-full h-auto shadow-none rounded border-gray-900 mt-6">
             <CardHeader>
               <CardTitle className="text-2xl">Projects</CardTitle>
             </CardHeader>
-            <CardContent>
-              <div className="mb-6">
-                <h3 className="text-xl font-semibold">
-                  <a
-                    href="https://github.com/lmartns/toy-story"
-                    className="hover:underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Projeto Toy Story
-                  </a>
-                </h3>
-                <p>
-                  Descrição: Este projeto consiste em uma loja de brinquedo
-                  feita em Java.
-                </p>
-                <p>Tecnologias: Java, Spring, Hibernate</p>
-              </div>
-              <div className="mb-6">
-                <h3 className="text-xl font-semibold">
-                  <a
-                    href="https://github.com/lmartns/star-wars"
-                    className="hover:underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Projeto Star Wars
-                  </a>
-                </h3>
-                <p>
-                  - Descrição: Este projeto é um banco de dados de personagens
-                  do universo Star Wars.
-                </p>
-                <p>- Tecnologias: Node.js, Express, MongoDB</p>
-              </div>
-              <div className="mb-6">
-                <h3 className="text-xl font-semibold">
-                  <a
-                    href="https://github.com/lmartns/avengers"
-                    className="hover:underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Projeto Avengers
-                  </a>
-                </h3>
-                <p>
-                  Descrição: Este projeto é um aplicativo para gerenciar times
-                  de super-heróis.
-                </p>
-                <p>Tecnologias: React, Redux, Firebase</p>
-              </div>
-            </CardContent>
+            {projects.map((project, index) => (
+              <ProjectCard
+                key={index}
+                title={project.title}
+                description={project.description}
+                technologies={project.technologies}
+                link={project.link}
+              />
+            ))}
           </Card>
         </div>
       </div>
