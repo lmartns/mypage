@@ -73,12 +73,12 @@ const Home: React.FC = () => {
                 LinkedIn
               </a>
               <a
-                href="https://leomartins.substack.com/"
+                href="https://dev.to/lmartns"
                 className="text-primary hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Substack
+                Dev.to
               </a>
             </CardContent>
           </Card>
